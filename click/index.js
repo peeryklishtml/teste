@@ -3,9 +3,14 @@ const puppeteer = require('puppeteer');
 (async () => {
     let browser;
     try {
+
+
+
+
+        
         // Configurações do Puppeteer
-        browser = await puppeteer.launch({
-            headless: false, // Troque para 'true' no servidor se não precisar ver o navegador
+       const browser = await puppeteer.launch({
+            headless: true, // Troque para 'true' no servidor se não precisar ver o navegador
             args: ['--no-sandbox', '--disable-setuid-sandbox'] // Necessário em servidores
         });
         const page = await browser.newPage();
